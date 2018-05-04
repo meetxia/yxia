@@ -1,0 +1,780 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>boostrap综合</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!--引入boostrap-->
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+	<!-- 引入图标库 -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!--引入皮肤-->
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.css" rel="stylesheet">
+
+	<!--script scr="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script-->
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+<style type="text/css">
+	.xiaot{height: 80px; width: 130px; overflow: hidden; margin: 0 0 0px 0;}
+	.xiaot img{ width: 100%;}
+	#sb1 p{ margin-bottom: 20px; }
+	.znbj{ padding: 0 0 0 15px; }
+  @charset "utf-8";
+/* CSS Document */
+
+body{
+  background-color: #fbfbfb;
+}
+  ul,li{list-style-type: none;} li{ margin:0px 5px;}
+  .bs{color: #000;text-align: center;line-height: 50px;}
+  #qbs{background-color: #FFF;border-bottom-color: #999999;border-bottom-width: 2px;} 
+  .ys{min-height: 500px;background-color: #FFF;padding: 20px;}
+  .yss{background-color: #FFF;padding: 10px;margin-left: -15px;}
+  .con{ width:1000px; margin:0 auto;}
+  .con h1{ text-align:center;}
+  h1,h2{ font-weight:normal; color:#0CC;}
+  ul{ margin:0; padding:0; list-style:none;}
+  em{ font-style:normal;}
+    /*复选*/
+  .check_box{ display:inline-block; position:relative; margin-bottom:20px;}
+  .check_box label{ width:16px; height:16px; position:absolute; top:2px; left:-2px; border:2px solid #cacaca; border-radius:50%; background:#fff; cursor:pointer;}
+  .check_box label:hover{ border:2px solid #f78642;}
+  .check_box label:after{ content:''; width:8px; height:4px; position:absolute; top:4px; left:3px; border:2px solid #cacaca; border-top:none; border-right:none; opacity:0.4; transform:rotate(-45deg); /*-webkit-transform:rotate(-45deg);*/}
+  .check_box label:hover:after{ border:2px solid #f78642; border-top:none; border-right:none;}
+  .check_box input:checked + label{ border:2px solid #f78642;}
+  .check_box input:checked + label:after{ opacity:1; border:2px solid #f78642; border-top:none; border-right:none;}
+  .breadcrumb{ margin:0px; padding:0; background-color:inherit;}
+  .navbar-toggle .icon-bar{ background-color:#333;}
+  .nbj{padding: 10px; }
+  .navbar-collapse{ padding-left:0;}
+  .btn-success{ background-color:#F39;}
+  a:link{ color:#666;}
+  a:hover{ color:#000;}
+  .container .col-md-2.nbj #dh .nav.navbar-nav li{ width:100%;}
+  .container .col-md-2.nbj #dh .nav.navbar-nav li a{width: 100%;}
+  .nav.navbar-nav li a{ display:inline-block;}
+  .nav.navbar-nav li a:hover{ background-color:#F39; color:#FFF;display:inline-block;}
+  .pull-left{ margin-left:-15px;}
+  #qbs .container  img{ width:100%;}
+  .bss{ background-color: #FFF;}
+  element.style {   padding-top: 5px;}
+  .ysss {min-height: 150px;background-color: #FFF;padding: 15px;border-bottom: solid 1px #999;}
+  .modal-dialog { margin-top:15%;}
+  .bb {margin-bottom: 20px;height: 2em;margin-top: 10px;}
+  .modal-header{background-color:#777;  border-radius:6px 6px 0 0;padding: 8px;}
+  .modal-title{ font-family:"黑体"; font-size:20px; color:#FFF; text-align:center;}
+  label{ text-align:center; margin-top: 1%;}
+  .control-label{ text-height:28px;}
+  .s1{  line-height: 125px;}
+  .jb{background-image: linear-gradient(to bottom, #F39 20%, #F39 88%); color:#FFF;}
+  .jbb{margin-left: 25%;}
+  .modal-footer{ border:none; height:auto; clear:both; text-align:center;}
+  .sva{ padding-top:0;}
+  .zt{ color:#FFF;margin-left: 20px;}
+  .modal-dialog {width:350px;}
+  .navbar{ margin:0;}
+  .carousel-caption {top: 60px;}
+
+/*最后改的样式*/
+  .bk {
+   border-bottom: 0.3px solid #ddd;
+   margin-bottom: 15px;
+ }
+ .container .col-md-9 .col-md-6.nbj .col-md-12 .col-md-4 {
+   margin: 0px;
+   padding: 0px;
+ }
+
+ .jnbj {
+   margin: 0px;
+   padding: 0px;
+ }
+ .h4a {
+   margin: 0px 0px 3% 0px ;
+ }
+ .col-md-8 p {
+   font-size: 13px; 
+ }  
+ 
+ #profile .pull-left,.pull-right{
+   padding-left: 15px;
+   margin-bottom: 18px;
+ }
+ #home .pull-left,.pull-right{
+   padding-left: 15px;
+   margin-bottom: 18px;
+ }
+ #profile li .pull-left {
+   margin: 0px;
+ }
+ /*第二栏鼠标样式*/
+ #home a:link{ color:#333;}
+ #home a:hover span{color: #000000;text-decoration:underline;}
+ #profile a:link{ color:#333;}
+ #profile a:hover span{color: #000000;text-decoration:underline;}
+ /*第一栏鼠标样式*/
+ #sb1 .col-md-12.jnbj a:link{color: #555;}
+ #sb1 .col-md-12.jnbj a:link h4{color: #00698C;}  
+ #sb1 .col-md-12.jnbj a:hover h4{ color: #0088B5;}
+ #sb1 .col-md-12.jnbj a:hover p{ color:#000; text-decoration:underline;}
+
+   #gg .btn-group{ display: block; }
+   .tck{ display:none; clear: both; height: 50px; padding: 5px 0 5px 0px;}
+   .tck .pull-left{ padding: 0; margin: 0 0 0 15px; }
+   .select{  color: #fff;
+    width: 100px;
+    background-color: #777;
+    margin: 0 0 0 15px;
+    height: 20px;
+    border: 1px solid #fff;}
+    #weibu{ padding-top: 10px; }
+    #di3{padding-left:0px;}
+    #di3 img{ width: 80%; }
+    .jnyj{ padding-left: 55px; }
+    #gg{ clear: both; }
+    /*最后结束*/
+
+  /*手机版设置*/
+  @media screen and (max-width:768px){
+    .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 44px;}
+    .dd{ border:none;}.dw{position: absolute; top: 48px;z-index: 20; width: 100%; }
+    h3{ margin-top:20px;} 
+    .yss{margin: 0;background-color: #0000007a; }
+    #qbs .container .navbar-header a img{ width:40%;}
+    .bss{ padding-top:5px;padding-bottom: 50px;}
+    .container{ padding:10px}
+    .navbar{ margin:0;}
+    .nav.navbar-nav li a {text-align: center;color: #fff;}
+    .navbar-collapse.collapse {padding-bottom: 10px;}
+    .navbar-nav { margin: 7.5px 0px;}
+    .ysss {background-color: #d9534ff2;border-bottom: solid 1px #5bc0de; color:#FFF;}
+    .container{ padding:0;}
+    .bb{ margin-bottom:20px;}
+    .modal-dialog { margin-top: 30%;}
+    .carousel-inner{ height:0;}
+    .navbar-brand, .navbar-nav > li > a {0 1px 0 rgba(255, 255, 255, 0)ext-shadow:0;}
+    .modal-content {background-color: #ffffffd1;}
+    /*手机幻灯*/
+    .bs-example,.carousel-control{height: 225px;}
+    .ggg{ height: 230px; }
+    .carousel-indicators {bottom: 43%;}
+    .carousel-caption {top: 0px;}
+    .modal-dialog {  left: 5%;}
+    .sbj{ margin-top:20px; padding:0;}
+    .col-md-8 p { margin: 0 0 20px;}
+        /*手机头像图片*/
+        .znbj{ padding: 0 0 0 30px; }
+        #di3 img{ width: 80%; }
+        #di3{padding:0 15px;}
+        #di3 .jnbj{ margin-bottom: 20px; }
+        #dibu{ clear: both; }
+        .tup{ display: block;margin-left: auto;margin-right: auto;}
+        #juzhong{ text-align: center; }
+        #sb1 .col-md-12.jnbj a:link h4 { text-decoration: none;}
+        #myTabContent{ padding: 10px; }
+        .jnyj{ margin: 20px 0;  }
+        p {margin: 9px 0 10px;}
+        .sjbqcfd{clear:both;}
+        .bk{ margin-top: 10px; }
+        .nbj{padding-top:5px; }
+        ol {   margin-bottom: -45px;}
+      
+} /*手机版设置结束*/
+
+   .container .col-md-9.sbj .col-md-6.nbj .col-md-12.jnbj .col-md-4.col-xs-4 img { width:120px;
+} 
+.container .col-md-3.nbj li .col-md-4 img{ width:20%;}
+    .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse{ margin: 0; }
+    .qcfd{ clear:both;}
+    }
+
+  input[type="radio"], input[type="checkbox"] {margin: 3px 2px 0;}
+  .sva a:link{ color:#FFF;}.sva a:hover {color:#FFF;}.jz{ text-height:20px;}
+  .modal-footer .pull-left{margin:0; }
+  .sbk{ border-top: solid 1px #CCCCCC;padding:8px 15px;}
+  .sys{ text-align:center; margin:0; padding:0; line-height:20px;}
+  .dropdown-menu{ border-radius:0;}
+  .yy{ border-radius:50%; border:solid 1px #666666; width:40px; height:40px;}
+  .yy i{ font-size: 20px;text-align: center;line-height: 38px;}
+  .modal-footer .col-md-3 .yy:link{border:solid 1px #eee; color:#eee}
+  .modal-footer .col-md-3 .yy:hover{border:solid 1px #0F0;}
+  .modal-footer .col-md-3 a:hover{ color:#090;}
+  .modal-footer a:visited{color: #090;border: 1px solid #090;}
+  .dibianju{ margin-bottom:20px;}
+  /*幻灯片*/
+  .bs-example{ width:100%;}
+  .carousel-inner{
+  width: 100%;
+  height: 350px;
+}
+  .item img{width: 100%;}
+  
+  .bg-danger {background-color: #ff4646;}
+  .item .btn:link {color: #fff;}
+  .item .btn:hover {color: #eaeaea;}
+  .item .btn:visited {color: #fff;}
+  .juzhong{margin-left: 38%; margin-top: 20px; }
+  #home .col-md-8,.col-md-4{   padding:0;}
+  #pull .pull-left{ margin: 0 0 20px 0;}
+@media screen and(max-width:1200px){
+     .container .col-md-9 .col-md-6.nbj .col-md-12.jnbj .col-md-4.col-xs-4 img { width:100px;
+}
+  }
+  @media screen and (max-width: 400px){
+.sbj {
+    margin-top: 0px;}
+  
+  }
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="http://www.l7hq.xin/css/zonghe.css">
+</head>
+
+<body>
+  <nav class="navbar" id="qbs">
+
+   <div class="container">
+
+    <div class="navbar-header">
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dh" aria-expanded="false" aria-controls="dh">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a  href="#1a11" ><img class="center-block" src="https://img.ketangpai.com/ketangpai.aliapp.com/1/webroot/Uploads/Download/2018-03-13/5aa76ad743c01.jpg?OSSAccessKeyId=LTAItfPkNIKJFibY&Expires=4674521303&Signature=GYAbBiJNPRLzEG71vaCrHVRwq%2FM%3D" /></a>
+  </div>
+
+  <div class="hidden-xs">
+   <ul class="nav navbar-nav">
+    <li class="active"><a href="#1=011">入学报名</a></li>
+    <li><a href="#start11">咨询</a></li>
+    <li><a href="#assembly11">荣誉墙</a></li>
+    <li><a href="#javascript11">课表</a></li>
+    <li><a href="#Example11">留言</a></li>
+   </ul>
+ 
+    <div class="pull-right bs visible-md visible-lg">
+      <ol class="breadcrumb"> <!-- 下载APP -->
+       <li class="dropdown" >
+
+        <a href="5ad" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">下载App</a> 
+        <ul class="dropdown-menu">
+         <img src="https://sp0.baidu.com/5aU_bSa9KgQFm2e88IuM_a/micxp1.duapp.com/qr.php?value=Bootstrap%E5%B8%AD%E6%96%87%E7%BD%91" width="150" height="150">
+         <p class="sys">扫一扫下载APP</p>
+        </ul>
+       </li>
+       <li data-toggle="modal" data-target="#denglu"><a href="#6ae">登录</a></li>
+       <li data-toggle="modal" data-target="#zhuce"><a href="#8ad">注册</a></li>
+      </ol>
+    </div>
+
+  </div><!--/.nav-collapse -->
+
+
+
+</div>
+
+</nav>
+<!--导航结束 -->
+<!--幻灯开始 -->
+<div class="bs-example"data-example-id="simple-carousel">
+
+ <div class="bs-example" data-example-id="simple-carousel">
+  <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item"> 
+
+        <div class="carousel-caption">
+          <h3>Always add labels</h3>
+          <p>Screen readers will have trouble with your forms if you don't include a label for every input. For these input groups, ensure that any additional label or functionality is conveyed to assistive technologies.</p>
+          <button type="button" class="btn bg-danger col-xs-6 col-md-3 juzhong hidden-xs">bootstrap</button>
+        </div>
+        <img alt="First slide [900x500]" src="http://www.l7hq.xin/bizhi/86.jpg" data-holder-rendered="true">
+
+      </div>
+      <div class="item">
+
+        <div class="carousel-caption">
+          <h3>Thumbnail label</h3>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <button type="button" class="btn bg-danger col-xs-6 col-md-3 juzhong hidden-xs">bootstrap</button>
+        </div>
+        <img alt="Second slide [900x500]" src="http://www.l7hq.xin/bizhi/67.jpg" data-holder-rendered="true">
+
+      </div>
+      <div class="item active">
+
+        <img alt="Third slide [900x500]" src="http://www.l7hq.xin/bizhi/88.jpg" data-holder-rendered="true">
+
+        <div class="carousel-caption">
+          <h3>Hello, world!</h3>
+          <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+          <button type="button" class="btn bg-danger col-xs-6 col-md-3 juzhong hidden-xs">bootstrap</button>
+        </div>
+
+      </div>
+    </div>
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+</div><!--幻灯结束 -->
+<!--container开始-->
+<div class="container">
+
+  <div class="col-md-2 nbj dw visible-xs visible-sm">
+        <div class="yss collapse navbar-collapse" id="dh"> 
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#a1">用户中心</a></li>
+            <li><a href="#start">个人资料</a></li>
+            <li><a href="#assembly">账户安全</a></li>
+            <li><a href="#javascript">我的朋友</a></li>
+            <li><a href="#Example">课表查看</a></li>
+            <li><a href="#assembly">成绩查询</a></li>
+            <li><a href="#javascript">在线课堂</a></li>
+            <li><a href="#Example">关于你们</a></li>
+          </ul>
+        </div>
+      </div>
+  <!--md9开始-->
+  <div class="col-md-9 sbj">
+   <!--md6开始-->
+   <div class="col-md-6 nbj" id="sb1"><!--md12结束-->
+     <div class="col-md-12 bk">
+      <h4 class="pull-left" style=" font-weight:bold;">课程推荐</h4>
+      <p class="pull-right" style=" margin-top:3%;"><a href="#20">更多》</a></p>
+    </div>
+    <div class="col-md-12 jnbj"><a href="#e25">
+      <div class="col-md-4 col-xs-4">
+       <div class="xiaot"> <img src="http://www.l7hq.xin/tximg/08.jpg" " > </div></div>
+        <div class="col-md-8 col-xs-8">
+         <h4 class="h4a">Togglable tabs</h4>
+         <p>Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus. </p>
+       </div></a>
+     </div><!--md12结束-->
+     <div class="col-md-12 jnbj"><a href="#e65">
+      <div class="col-md-4 col-xs-4">
+        <div class="xiaot"><img src="http://www.l7hq.xin/tximg/09.jpg" " > </div></div>
+        <div class="col-md-8 col-xs-8">
+         <h4 class="h4a">Page defaults</h4>
+         <p>The <html> and <body> elements are updated to provide better page-wide defaults. More specifically: </p>
+         </div></a>
+       </div><!--md12结束-->
+       <div class="col-md-12 jnbj"><a href="#e55">
+        <div class="col-md-4 col-xs-4">
+          <div class="xiaot"><img src="http://www.l7hq.xin/tximg/010.jpg" " > </div></div>
+          <div class="col-md-8 col-xs-8">
+           <h4 class="h4a">Native font stack</h4>
+           <p>The default web fonts (Helvetica Neue, Helvetica, and Arial) have been dropped in Bootstrap</p>
+         </div></a>
+       </div><!--md12结束-->
+       <div class="col-md-12 jnbj"><a href="#e59">
+        <div class="col-md-4 col-xs-4">
+         <div class="xiaot"> <img src="http://www.l7hq.xin/tximg/012.jpg" " > </div></div>
+          <div class="col-md-8 col-xs-8">
+           <h4 class="h4a">Headings and paragraphs</h4>
+           <p>This font-family is applied to the <body> and automatically inherited globally</p>
+           </div></a>
+         </div><!--md12结束-->	
+       </div>
+       <!--md6结束-->
+       <!--md6开始-->               
+       <div class="col-md-6 nbj sjbqcfd" style="padding-top: 17px;"><!--sjbqcfd手机版清除浮动-->
+         <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+          <ul id="myTabs" class="nav nav-tabs" role="tablist">
+           <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
+           <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Profile</a></li>
+         </ul>
+       </li>
+       <div id="myTabContent" class="tab-content">
+        <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab" style=" margin-top:15px;">
+         <a href="#s1ae">
+          <p  style="font-weight:bold; "><span class="pull-left">Raw denim you probably haven't.</span><span class="pull-right" >12-24</span></p></a>
+
+          <a href="#s1aa">
+            <p><span class="pull-left" >A description list is perfect for defining terms.</span><span class="pull-right" >12-18</span></p></a>
+
+            <a href="#s1s">
+              <p><span class="pull-left">Vestibulum id ligula porta felis euismod.</span><span class="pull-right">12-08</span></p></a>
+
+              <a href="#s1ed">
+                <p ><span class="pull-left">Donec id elit non mi porta gravida.</span><span class="pull-right" >11-29</span></p></a>
+
+                <a href="#srer1">
+                  <p><span class="pull-left">Etiam porta sem magna mollis euismod.</span><span class="pull-right" >11-18</span></p></a>
+
+                  <a href="#s1tr">
+                    <p><span class="pull-left">Tables are slightly adjusted to style.</span><span class="pull-right" >11-15</span></p></a>
+
+                    <a href="#s1t">
+                      <p ><span class="pull-left">Collapse and ensure consistent text-align.</span></p><span class="pull-right">11-12</span></a>
+
+                      <a href="#s1y">
+                        <p><span class="pull-left">Various form elements have rebooted for.</span><span class="pull-right" >09-25</span></p></a>
+
+                        <a href="#s1v">
+                          <p><span class="pull-left">Margin so they can be used as wrappers.</span><span class="pull-right" >08-02</span> </p></a>
+
+                          <a href="#s1as">
+                            <p><span class="pull-left">These changes, and are demonstrated below.</span><span class="pull-right" >08-01</span></p></a>
+
+
+                          </div>
+                          <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+
+                           <a href="#s1ae">
+                            <p  style="font-weight:bold; "><span class="pull-left">You with the href attribute.</span><span class="pull-right" >08-24</span></p></a>
+
+                            <a href="#s1aa">
+                              <p><span class="pull-left" >Click the buttons and hide another. </span><span class="pull-right" >07-24</span></p></a>
+
+                              <a href="#s1s">
+                                <p><span class="pull-left">Extend the default collapse behavior an.</span><span class="pull-right">06-22</span></p></a>
+
+                                <a href="#s1ed">
+                                  <p ><span class="pull-left">Anim pariatur cliche reprehenderit.</span><span class="pull-right" >06-15</span></p></a>
+
+                                  <a href="#srer1">
+                                    <p><span class="pull-left">Make expand/collapse controls accessible.</span><span class="pull-right" >06-11</span></p></a>
+
+                                    <a href="#s1tr">
+                                      <p><span class="pull-left">Additionally, if your control element a single.</span><span class="pull-right" >06-07</span></p></a>
+
+                                      <a href="#s1t">
+                                        <p ><span class="pull-left">The collapse plugin utilizes a few lifting.</span></p><span class="pull-right">04-24</span></a>
+
+                                        <a href="#s1y">
+                                          <p><span class="pull-left">To add accordion-like to a collapsible.</span><span class="pull-right" >03-14</span></p></a>
+
+                                          <a href="#s1v">
+                                            <p><span class="pull-left">Options can be passed via or JavaScript.</span><span class="pull-right" >03-04</span> </p></a>
+
+                                            <a href="#s1as">
+                                              <p><span class="pull-left">Activates your content as a element.</span><span class="pull-right" >02-22</span></p></a>
+
+                                          <a href="#s1v">
+                                            <p><span class="pull-left">Options  via attributes or JavaScript.</span><span class="pull-right" >03-04</span> </p></a>
+
+                                            <a href="#s1as">
+                                              <p><span class="pull-left">Activates your a collapsible element.</span><span class="pull-right" >02-22</span></p></a>
+
+
+
+                          </div>
+                                          </div>
+                                        </div>
+                                        <!-- 输入框 -->
+                                        <div class="tck">   
+                                            <!-- 下拉框 -->
+                                             <div class="form pull-left" style="margin-left: -5px;">
+                                                  <select id="city" class="select">
+                                                      <option value="贵阳">Multiple</option>
+                                                      <option value="六盘水">buttons</option>
+                                                      <option value="都匀">Bootstrap</option>     
+                                                  </select>
+                                            </div>
+                                           <span class="check_box pull-left">
+                                              <input type="checkbox" id="check_2">
+                                               <label for="check_2"></label>
+                                                <em>日期</em>
+                                           </span>
+
+                                            <span class="check_box pull-left">
+                                              <input type="checkbox" id="check_2">
+                                               <label for="check_2"></label>
+                                                <em>大小</em>
+                                           </span>
+                                     
+
+                                      </div>
+                                      <!-- 弹出框里面内容结束 -->
+                                             <form id="gg">
+                                               <div class="input-group">
+          <input type="text" class="form-control" aria-label="Text input with multiple buttons">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default">搜索</button>
+            <button type="button" class="btn btn-default" id="cl">高级搜索</button>
+          </div>
+        </div>
+                                                 
+
+                                                
+                                             </form>
+                                        <!-- 输入框结束 -->
+                                      </div>
+                                      <!--md6结束-->
+                                    </div>
+                                    <!--md9结束-->
+
+                                    <!--md3开始-->
+                                    <div class="col-md-3 nbj" style="" id="di3">
+                                     <div class="col-md-12 bk" style="">
+                                      <h4 class="pull-left" style=" font-weight:bold; margin-bottom: 20px;">本周活跃用户</h4> <p class="pull-right" style=" margin-top:3%;"><a href="#20">更多》</a></p>
+                                    </div>
+                                    <a href="#d99"><li class="col-md-12" style="clear: both;">
+                                      <div class="col-md-3 col-xs-3 jnbj"><img class="img-circle" src="http://www.l7hq.xin/tximg/0.jpg"></div>
+                                      <div class="col-md-5 col-xs-5 jnbj" style=" margin-top:5%;"><p class="znbj">黑马程序猿</p></div>
+                                      <div class="col-md-4 col-xs-4 jnbj" style=" margin-top:5%;"><p class="pull-right">+6588</p></div>
+                                    </li></a>
+                                    <a href="#d88"><li class="col-md-12" style=" margin-top:5%; clear: both;">
+                                      <div class="col-md-3 col-xs-3  jnbj"><img class="img-circle" src="http://www.l7hq.xin/tximg/01.jpg" ></div>
+                                      <div class="col-md-5 col-xs-5  jnbj" style=" margin-top:5%;"><p class="znbj">白马程序猿</p></div>
+                                      <div class="col-md-4 col-xs-4  jnbj" style=" margin-top:5%;"><p class="pull-right">+5447</p></div>
+                                    </li></a>
+                                    <a href="#d12"><li class="col-md-12" style=" margin-top:5%; clear: both;">
+                                      <div class="col-md-3 col-xs-3 jnbj"><img class="img-circle" src="http://www.l7hq.xin/tximg/03.jpg" ></div>
+                                      <div class="col-md-5 col-xs-5 jnbj" style=" margin-top:5%;"><p class="znbj">黄马程序猿</p></div>
+                                      <div class="col-md-4 col-xs-4 jnbj" style=" margin-top:5%;"><p class="pull-right">+5228</p></div>
+                                    </li></a>
+                                    <a href="#d10"><li class="col-md-12" style=" margin-top:5%; clear: both;">
+                                      <div class="col-md-3 col-xs-3 jnbj"><img class="img-circle" src="http://www.l7hq.xin/tximg/04.jpg" ></div>
+                                      <div class="col-md-5 col-xs-5 jnbj" style=" margin-top:5%;"><p class="znbj">绿马程序猿</p></div>
+                                      <div class="col-md-4 col-xs-4 jnbj" style=" margin-top:5%;"><p class="pull-right">+4889</p></div>
+                                    </li></a>
+                                    <a href="#d9"><li class="col-md-12" style=" margin-top:5%; clear: both;">
+                                      <div class="col-md-3 col-xs-3 jnbj"><img class="img-circle" src="http://www.l7hq.xin/tximg/016.jpg" ></div>
+                                      <div class="col-md-6 col-xs-6 jnbj" style=" margin-top:5%;"><p class="znbj">要想生活过得去</p></div>
+                                      <div class="col-md-3 col-xs-3 jnbj" style=" margin-top:5%;"><p class="pull-right">+3665</p></div>
+                                    </li></a>
+
+                                    <a href="#d8"><li class="col-md-12" style=" margin-top:5%; clear: both;">
+                                      <div class="col-md-3 col-xs-3 jnbj"><img class="img-circle" src="http://www.l7hq.xin/tximg/013.jpg" ></div>
+                                      <div class="col-md-6 col-xs-6 jnbj" style=" margin-top:5%;"><p class="znbj">身上总得有点绿</p></div>
+                                      <div class="col-md-3 col-xs-3 jnbj" style=" margin-top:5%;"><p class="pull-right">+3253</p></div>
+                                    </li></a>
+                                    <a href="#d8"><li class="col-md-12" style=" margin-top:5%; clear: both;">
+                                      <div class="col-md-3 col-xs-3 jnbj"><img class="img-circle" src="http://www.l7hq.xin/tximg/017.jpg" ></div>
+                                      <div class="col-md-5 col-xs-5 jnbj" style=" margin-top:5%;"><p class="znbj">青青草原</p></div>
+                                      <div class="col-md-4 col-xs-4 jnbj" style=" margin-top:5%;"><p class="pull-right">+3253</p></div>
+                                    </li></a><!-- jnbj=加内边距 -->
+                                   
+                                  </div>
+                                  <!--md3结束-->
+
+
+                                </div><!--container结束-->
+                            <hr style=" border-top: 1px solid #c7c7c7;">
+
+                              <!-- footer 开始-->
+                             <footer class=" container" id="weibu"><!--weibu=尾部 -->
+                              <div class="col-md-5 col-xs-12">
+                                <a href="#1a11"><img class="tup" src="https://img.ketangpai.com/ketangpai.aliapp.com/1/webroot/Uploads/Download/2018-03-13/5aa76ad743c01.jpg?OSSAccessKeyId=LTAItfPkNIKJFibY&amp;Expires=4674521303&amp;Signature=GYAbBiJNPRLzEG71vaCrHVRwq%2FM%3D"></a>
+                                <p style="margin-top: 15px;color: #555;text-align: center;">A slideshow component for cycling through elements, like a carousel.</p>
+                              </div>
+
+                              <div class="col-md-7 col-xs-12 ">
+                                <div class="col-md-3 col-xs-6 jnyj">
+                                  <h4 style="margin-left: 10%;color: #777;">关于</h4>
+                                  <ul>
+                                    <li><a href="#da5">关于我们</a></li>
+                                    <li><a href="#da8">广告合作</a></li>
+                                    <li><a href="#da6">友情链接</a></li>
+                                    <li><a href="#da2">招聘</a></li>
+                                  </ul>
+
+                                </div>
+                                <div class="col-md-3 col-xs-6 jnyj">
+                                  <h4 style="color: #777;">联系方式</h4>
+                                  <ul>
+                                    <li><a href="#da5">新浪微博</a></li>
+                                    <li><a href="#da8">电子邮件</a></li>
+                                    <li><a href="#da6">微信</a></li>
+                                    <li><a href="#da2">QQ</a></li>
+                                  </ul>
+                                </div>
+                                <div class="col-md-3 col-xs-6 jnyj">
+                                  <h4 style="color: #777;">旗下网站</h4>
+                                  <ul>
+                                    <li><a href="#da5">slideshow </a></li>
+                                    <li><a href="#da8">component</a></li>
+                                    <li><a href="#da6">through </a></li>
+                                    <li><a href="#da2">carousel</a></li>
+                                    <li><a href="#da6">Bootstrap's</a></li>
+                                    <li><a href="#da2">Activates you</a></li>
+                                  </ul>
+                                </div>
+                                <div class="col-md-3 col-xs-6 jnyj">
+                                  <h4 style="margin-left: 1%;color: #777;">赞助商</h4>
+                                  <ul>
+                                    <li><a href="#da5">阿里云</a></li>
+                                    <li><a href="#da8">腾讯云</a></li>
+                                    <li><a href="#da6">Google</a></li>
+                                    <li><a href="#da2">IBM</a></li>
+                                  </ul>
+                                </div>
+                              </div><div class="col-md-12" style="border-top: 0.5px solid #c7c7c7; margin: 20px 0 20px 0;" id="dibu"><p style="text-align: center; margin-top: 20px;color: #777;" id="jizhong">Extend the default collapse behavior to create an accordion with the panel component.</p></div>
+                            </footer><!-- footer 结束-->
+
+                                <!--登录模态框-->
+
+                                <div class="modal fade" id="denglu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                 <div class="modal-dialog">
+                                  <div class="modal-content">
+                                   <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                     &times;
+                                   </button>
+                                   <h4 class="modal-title" id="myModalLabel">
+                                     用户登录
+                                   </h4>
+                                 </div>
+                                 <div class="modal-body" id="pull">
+                                  <form>
+                                   <div class="form-group bb">
+
+                                    <div class="col-md-12">
+                                     <input type="email" class="form-control" id="recipient-sj1" placeholder="手机/Email">
+                                   </div>
+                                 </div>
+                                 <div class="form-group bb">
+                                  <div class="col-md-12">
+                                   <input type="password" class="form-control" id="inputPassword2" placeholder="6-20位密码">
+                                 </div>
+                               </div>
+                               <span class="check_box pull-left">
+                                <input type="checkbox" id="check_2">
+                                <label for="check_2"></label>
+                                <em>7天内自动登录</em>
+                              </span>
+                              <a href="bootstrap界面.html" class=" pull-right" style="margin-right:10px;">忘记密码？</a>
+                            </form>
+                          </div>
+                          <div class="modal-footer sva">
+                            <a href="bootstrap1.html">
+                             <button type="button" class="btn bg-danger col-xs-12 col-md-12">
+                              登录
+                            </button>
+                          </a>
+                        </div>
+
+                        <div class="modal-footer sbk">
+
+                          <a href="ads5" data-toggle="modal" data-target="#zhuce" class="pull-right">没有账号>注册</a>
+
+                          <p class="pull-left">其他方式登录</p>
+
+                        </div>
+                        <div class="modal-footer dibianju">                  	
+                          <div class="col-md-3 col-xs-3">
+                            <a href="#1a">
+                            	<div class="yy">
+                                <i class=" fa fa-qq"></i> </div></a></div>
+                                
+                                <div class="col-md-3 col-xs-3">
+                                  <a href="#2aa">
+                                    <div class="yy">
+                                      <i class="fa fa-weibo fa-2x"></i> </div></a></div>
+
+                                      <div class="col-md-3 col-xs-3">
+                                        <a href="#3a">
+                                          <div class="yy">
+                                            <i class="fa fa-weixin fa-2x"> </i></div></a></div>
+                                            <div class="col-md-3 col-xs-3"> 
+                                              <a href="#4a">
+                                                <div class="yy">
+                                                  <i class="fa fa-twitter fa-2x"></i></div></a></div>
+
+                                                </div>
+                                              </div><!-- /.modal-content -->
+                                            </div><!-- /.modal -->
+                                          </div>
+                                          <!--模态框结束-->
+
+
+                                          <!--注册模态框-->
+
+                                          <div class="modal fade" id="zhuce" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                           <div class="modal-dialog">
+                                            <div class="modal-content">
+                                             <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                               &times;
+                                             </button>
+                                             <h4 class="modal-title" id="myModalLabel">
+                                               注册
+                                             </h4>
+                                           </div>
+                                           <div class="modal-body">
+
+                                            <form>
+                                             <div class="bb">
+                                              <div class="form-group">
+                                               <div class="col-md-12">
+                                                <input type="email" class="form-control magentaPulse" id="recipient-sj" placeholder="手机/Email">
+                                              </div>
+                                            </div></div>
+
+                                            <div class="bb">
+                                             <div class="form-group">
+
+                                              <div class="col-md-12">
+                                               <input type="email" class="form-control magentaPulse" id="recipient-name" placeholder="真实姓名">
+                                             </div>
+                                           </div></div>
+
+                                           <div class="bb"><div class="form-group">
+                                            <div class="col-md-12">
+                                             <input type="password" class="form-control" id="inputPassword3" placeholder="6-20位密码">
+                                           </div>
+                                         </div></div>
+
+                                         <div class="bb"> 
+
+                                          <div class="form-group">
+
+                                           <div class="col-md-12">
+                                            <input type="password" class="form-control" id="inputPassword4" placeholder="6-20位密码">
+                                          </div>
+                                        </div></div>
+
+                                      </div>
+
+                                    </form>
+
+
+
+                                    <div class="modal-footer">
+
+                                     <a href="bootstrap界面.html">
+                                      <button type="button" class="btn jb
+                                      col-sm-12 col-md-12 btn-lg">     注册 
+                                    </button>
+                                  </a>
+
+                                </div>
+                                <div class="modal-footer sbk">
+                                  <a href="bootstrap界面.html" class="pull-left">扫码登录</a>
+                                  <a data-toggle="modal" data-target="#zhuce" class="pull-right">短信注册</a>
+                                </div>
+                              </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                          </div>
+                          <!--模态框结束-->
+             <!-- 弹出框 jq-->
+             <script type="text/javascript">
+              $(document).ready(function(){
+
+                $("#cl").click(function(){$(".tck").slideToggle("slow,300"); });
+
+              });
+            </script>
+            <!-- 下拉框 -->
+         </body>
+                        </html>
