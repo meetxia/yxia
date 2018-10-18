@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    var  num  = 12433245245432 ;
+  //除了null、  undefined之外的任何字面量都有toString()方法，表示变为字符串
+    var  length  = num.toString().length;
+  //循环终点
+    var  end=  -Math. ceil(length / 3) * 3;
+  //结果数组，把特殊的末尾三位放入数组
+    var result=[num.toString().slice(-3)];
+  //遍历-6、-9、-12、 -1.....
+  //截取的是slice(-6,-3) slice(-9,-6)  slice(-12, -9)
+      for(var  i = -6; i >= end; i -= 3){
+
+          result. unshift(num. toString().slice(i,i+3));
+
+        }
+      //把数组变为字符串
+      console.log(result.join(","));
+
+  </script>
+
+
+</body>
+</html>

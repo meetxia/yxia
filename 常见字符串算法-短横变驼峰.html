@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var str = "border-left-color";
+
+        alert(change(str));
+
+        function change(str){
+
+
+        //拆分数组
+        var strArr =str.split("-");
+        console.log(strArr);
+
+        //遍历数组
+        for( var i = 1; i < strArr.length; i++){
+
+            var chars = strArr[i];
+            //将数组的这一项的字符串的首字母变成大写，与剩余字母做拼接
+            strArr[i] = chars[0].toUpperCase() + chars.slice(1);
+
+            }
+
+            //拼接
+            console.log(strArr.join(""));
+            return strArr.join("");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var str = "border-left-color";
+
+          str = str.replace(/\-(\w)/g,function(match,$1){
+
+            return $1.toUpperCase();
+
+          });
+
+          console.log(str);
+          alert(str);
+    </script>
+</body>
+</html>

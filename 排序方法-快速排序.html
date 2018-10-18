@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+      var arr = [54,5151,5,41534,56,454,154];
+
+        arr = quick(arr);
+        console.log(arr);
+
+        function quick(arr){
+            if(arr.length <= 1){
+                return arr;
+            }
+
+            var result = [];
+            var small = [];
+            var big = [];
+            //标杆==就是中间分割的数字
+            var picot = arr[0];
+            //遍历这个数组，把小于放到small里面，大的放到big里面
+            for (var i = 1; i < arr.length; i++) {
+                if(arr[i] < picot){
+                    small.push(arr[i]);
+                }else{
+                    big.push(arr[i]);
+                }
+            }
+            //把小数组，标杆，大数组结合
+            result = quick(small).concat(picot,quick(big));
+            return result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*用正则加上千分符*/
+    var str = "今天有雾霾出去戴口罩";
+        str = str.replace(/\B/g,"☆");
+        console.log('实例一：  '+str+'\n');
+        console.log();
+
+        /*/B是一个特殊的正则的东西，表示字母边界*/
+
+    var str = "ABC,asda sfaf safas";
+        str = str.replace(/\B/g,"☆");
+        console.log('实例二：  '+str+'\n');
+
+    var str = "我爱你，你却爱着他";
+        str = str.replace(/爱(?=你)/g,"☆");
+        console.log('实例三：  '+str+'\n');
+
+    var str = "51564154464654";
+        str = str.replace(/\B(?=\d{8}$)/g,"☆");
+        console.log('实例四：  '+str+'\n');
+
+    var str = "4854151515";
+        str = str.replace(/\B(?=(\d{3})+$)/g,"☆");
+        console.log('正则千分实例五：  '+str+'\n');
+
+    </script>
+</body>
+</html>
